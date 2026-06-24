@@ -21,8 +21,8 @@ public class ActualizadorService {
     private final String VERSION_ACTUAL = "1.1";
     
     // Propietario y repositorio en GitHub. Ajustar a los valores reales del usuario.
-    private final String GITHUB_OWNER = "Federico18011980";
-    private final String GITHUB_REPO = "CanariasSistem"; 
+    private final String GITHUB_OWNER = "federico18011980";
+    private final String GITHUB_REPO = "pietras"; 
 
     private Vista.Sistema vistaPrincipal;
 
