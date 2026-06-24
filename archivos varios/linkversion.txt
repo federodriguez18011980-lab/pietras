@@ -1,0 +1,17 @@
+https://gist.githubusercontent.com/federodriguez18011980-lab/a095d16849223f94a9417fcd6b1a86c5/raw/eda520f7168fa07c0fadc6f9819d646d6b94e5cb/version.txt
+C:\Users\feder\CanariasSystem\data
+
+¡Trato hecho! Vamos a transformar la interfaz de Canarias System para que se vea moderna, limpia y de alto nivel. 🎨✨
+
+El objetivo de este estilo "Premium" es usar una paleta de colores coherente (basada en el azul oscuro que ya tenemos), fuentes legibles y una distribución de elementos que no agobie al usuario.
+
+Pásame el código de la primera vista que quieras renovar (seguramente la de Proveedores o el Panel Principal). Mientras me la pasas, te doy las claves que aplicaremos:
+
+💎 El "Toque Premium" de Canarias System:
+Consistencia de Color: Usaremos el azul oscuro (#2C3E50) para cabeceras y el rojo (#E74C3C) para acciones importantes como el PDF o eliminar.
+
+Tablas Espaciadas: Nada de celdas apretadas. Le daremos altura a las filas y centraremos el contenido.
+
+Botones con Estilo: Quitaremos el borde gris aburrido de Java y usaremos botones con colores planos y fuentes en negrita.
+
+Limpieza Visual: Eliminaremos bordes innecesarios y usaremos espacios en blanco para que el programa "respire".

@@ -1,0 +1,33 @@
+# =========================================================================
+# Pietras - GitIgnore Config
+# =========================================================================
+
+# Directorios de compilación y temporales de NetBeans
+/build/
+/nbproject/private/
+
+# Archivos binarios y empaquetados autogenerados
+/dist/
+/Output/
+/store/
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# Bases de datos H2 locales y archivos temporales
+/Base/*.db
+/Base/*.trace.db
+*.mv.db
+*.trace.db
+
+# Copias de seguridad locales (automáticas y manuales)
+/backups/
+/backups_automaticos/
+
+# Archivos de logs y temporales del sistema
+*.log
+*.tmp
+Thumbs.db
+.DS_Store

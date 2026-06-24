@@ -1,0 +1,2 @@
+sha256:562128d40958348bd22ead55668ac971c209aee32d4a9106388956d8e47abd39
+https://github.com/Federico18011980/CanariasSistem/releases/download/V1.1/CanariasSystem_Setup_v1.1.exe
