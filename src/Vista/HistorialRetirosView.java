@@ -28,6 +28,7 @@ public class HistorialRetirosView extends JFrame {
     private JButton btnBuscar, btnPdf;
 
     // Colores corporativos
+    private final Color colorPietras = new Color(244, 119, 21); // Naranja
     private Color azulOscuro = new Color(33, 47, 61);
     private Color grisFondo = new Color(242, 244, 244);
 
@@ -44,7 +45,7 @@ public class HistorialRetirosView extends JFrame {
 
         // --- PANEL SUPERIOR: FILTROS ---
         JPanel pnlFiltros = new JPanel(new FlowLayout(FlowLayout.LEFT, 15, 15));
-        pnlFiltros.setBackground(azulOscuro);
+        pnlFiltros.setBackground(colorPietras);
 
         dcDesde = new JDateChooser();
         dcDesde.setPreferredSize(new Dimension(130, 28));

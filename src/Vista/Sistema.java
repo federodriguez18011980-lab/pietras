@@ -716,8 +716,6 @@ public class Sistema extends javax.swing.JFrame {
         jMenuConfiguracion = new javax.swing.JMenu();
         jMenuItemParametros = new javax.swing.JMenuItem();
         itemBackup = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
         jMenuReportes = new javax.swing.JMenu();
         jMenuIReportesVarios = new javax.swing.JMenuItem();
         jMenuItemInformes = new javax.swing.JMenuItem();
@@ -2529,6 +2527,7 @@ public class Sistema extends javax.swing.JFrame {
         });
         jMenuVentas.add(menuResumenCaja);
 
+        jMenuItemAbrirCaja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/desbloquear 24.png"))); // NOI18N
         jMenuItemAbrirCaja.setText("Abrir Caja");
         jMenuItemAbrirCaja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2601,7 +2600,7 @@ public class Sistema extends javax.swing.JFrame {
         jmenuProductos.add(jMenuItemCatProducto);
 
         menuImpExp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/impExp 24x24.png"))); // NOI18N
-        menuImpExp.setText("Imp/Export");
+        menuImpExp.setText("Imp/Export & Editar Precios Masivemente");
         menuImpExp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuImpExpActionPerformed(evt);
@@ -2641,22 +2640,6 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
         jMenuConfiguracion.add(itemBackup);
-
-        jMenuItem2.setText("Sinc Web");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        jMenuConfiguracion.add(jMenuItem2);
-
-        jMenuItem3.setText("Pedidos Web");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
-            }
-        });
-        jMenuConfiguracion.add(jMenuItem3);
 
         jMenuBar1.add(jMenuConfiguracion);
 
@@ -3506,7 +3489,7 @@ public class Sistema extends javax.swing.JFrame {
         try {
             int id = Integer.parseInt(txtIdVentas.getText());
             String userHome = System.getProperty("user.home");
-            File file = new File(userHome + "/Documents/Canarias/Comprobantes/venta" + id + ".pdf");
+            File file = new File(userHome + "/Documents/Pietras/Comprobantes/venta" + id + ".pdf");
 
             
             Desktop.getDesktop().open(file);
@@ -3861,11 +3844,6 @@ public class Sistema extends javax.swing.JFrame {
         cv.setVisible(true);
     }//GEN-LAST:event_jMenuItemCatProductoActionPerformed
 
-    private void jMenuItemParametrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemParametrosActionPerformed
-        // TODO add your handling code here:
-        jTabbedPane1.setSelectedIndex(1);
-    }//GEN-LAST:event_jMenuItemParametrosActionPerformed
-
     private void jMenuRegistroUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuRegistroUsuarioActionPerformed
         
         Registro rg = new Registro();
@@ -3955,15 +3933,6 @@ public class Sistema extends javax.swing.JFrame {
          cargarCategorias();
      
     }//GEN-LAST:event_btnReCategoriaActionPerformed
-
-    private void itemBackupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBackupActionPerformed
-        // TODO add your handling code here:
-        
-    
-        BackupService bs = new BackupService();
-        bs.generarBackupManual();
-
-    }//GEN-LAST:event_itemBackupActionPerformed
 
     private void btnDolarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDolarActionPerformed
         
@@ -4083,20 +4052,6 @@ public class Sistema extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-        SincronizadorWooCommerce sincro = new SincronizadorWooCommerce();
-        sincro.vincularProductosLocalesConWeb();
-
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
-
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-        SincronizadorWooCommerce sincro = new SincronizadorWooCommerce();
-        sincro.descargarPedidosWeb();
-        
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
-
     private void jMenuItemProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProveedoresActionPerformed
         // TODO add your handling code here:
         jTabbedPane1.setSelectedIndex(2);
@@ -4120,6 +4075,18 @@ public class Sistema extends javax.swing.JFrame {
         // TODO add your handling code here:
         Sinc.vincularProductosLocalesConWeb();
     }//GEN-LAST:event_sincroWOOActionPerformed
+
+    private void itemBackupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBackupActionPerformed
+        // TODO add your handling code here:
+
+        BackupService bs = new BackupService();
+        bs.generarBackupManual();
+    }//GEN-LAST:event_itemBackupActionPerformed
+
+    private void jMenuItemParametrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemParametrosActionPerformed
+        // TODO add your handling code here:
+        jTabbedPane1.setSelectedIndex(1);
+    }//GEN-LAST:event_jMenuItemParametrosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -4264,8 +4231,6 @@ public class Sistema extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuConfiguracion;
     private javax.swing.JMenuItem jMenuIReportesVarios;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItemAbrirCaja;

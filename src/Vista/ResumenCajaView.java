@@ -273,7 +273,11 @@ public class ResumenCajaView extends JFrame {
 
         // Fila 1: Botones de Retiros e Históricos
         JButton btnRetirar = crearBotonPremium("Retirar Efectivo", "/Img/dinero-24.png", colorCobrizo);
-        btnRetirar.addActionListener(e -> new RetiroCajaView(this.usuario).setVisible(true));
+        btnRetirar.addActionListener(e -> {
+            RetiroCajaView retiro = new RetiroCajaView(this, this.usuario);
+            retiro.setVisible(true);
+            cargarResumen(); // Actualizar montos en la vista al cerrar
+        });
         gbcS.gridx = 0; gbcS.gridy = 0;
         pnlSur.add(btnRetirar, gbcS);
 

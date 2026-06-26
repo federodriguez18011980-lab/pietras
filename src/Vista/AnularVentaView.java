@@ -33,8 +33,10 @@ public class AnularVentaView extends JFrame {
     private java.awt.Color rojoAlizarin; 
     private java.awt.Color grisClaro;
     private java.awt.Color COLOR_COBRIZO; //= new Color(184, 139, 74); // Marrón Cobrizo #B88B4A
+    private java.awt.Color colorPietras;
 
     public AnularVentaView(String usuarioLogueado) {
+        this.colorPietras = new java.awt.Color(244, 119, 21);
         this.COLOR_COBRIZO = new java.awt.Color(184, 139, 74); // Marrón Cobrizo #B88B4A
         this.azulOscuro = new java.awt.Color(44, 62, 80);
         this.rojoAlizarin = new java.awt.Color(231, 76, 60);
@@ -53,7 +55,7 @@ public class AnularVentaView extends JFrame {
 
         // --- PANEL SUPERIOR (Buscador) ---
         JPanel pnlNorte = new JPanel(new BorderLayout());
-        pnlNorte.setBackground(COLOR_COBRIZO);
+        pnlNorte.setBackground(colorPietras);
         pnlNorte.setPreferredSize(new Dimension(850, 100));
         pnlNorte.setBorder(new EmptyBorder(15, 25, 15, 25));
 

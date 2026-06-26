@@ -22,6 +22,7 @@ public class HistoricoCierresView extends JFrame {
     private CajaCierreDao cierreDao = new CajaCierreDao();
 
     // Paleta de colores "Business"
+    private final Color colorPietras = new Color(244, 119, 21); // Naranja
     private Color azulEmpresarial = new Color(41, 128, 185);
     private Color fondoClaro = new Color(248, 249, 249);
 
@@ -39,7 +40,7 @@ public class HistoricoCierresView extends JFrame {
 
         // --- PANEL SUPERIOR: FILTROS ELEGANTES ---
         JPanel pnlNorte = new JPanel(new FlowLayout(FlowLayout.LEFT, 20, 15));
-        pnlNorte.setBackground(new Color(/*236, 240, 241*/21, 67, 96));
+        pnlNorte.setBackground(colorPietras);
         //private java.awt.Color azulHeader = new java.awt.Color(21, 67, 96);
         pnlNorte.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));
 

@@ -8,7 +8,7 @@ import java.time.LocalTime;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
-public class RetiroCajaView extends JFrame {
+public class RetiroCajaView extends JDialog {
 
     private JTextField txtMonto;
     private JTextArea txtMotivo;
@@ -23,11 +23,12 @@ public class RetiroCajaView extends JFrame {
     private java.awt.Color rojoAlerta = new java.awt.Color(192, 57, 43);
     private java.awt.Color fondoGris = new java.awt.Color(242, 244, 244);
 
-    public RetiroCajaView(String usuario) {
+    public RetiroCajaView(JFrame parent, String usuario) {
+        super(parent, "Movimiento de Salida - Caja", true); // Diálogo modal
         this.usuario = usuario;
         initComponents();
         configurarEstilos();
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(parent);
     }
 
     private void initComponents() {
