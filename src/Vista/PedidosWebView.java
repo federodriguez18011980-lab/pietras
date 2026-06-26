@@ -211,7 +211,12 @@ public class PedidosWebView extends JFrame {
         // Desglose de Artículos
         html.append("<h3 style='color:#F47715; margin-bottom:5px;'>ARTÍCULOS COMPRADOS</h3>");
         html.append("<table width='100%' border='0' cellspacing='0' cellpadding='4' style='font-size:11px;'>");
-        html.append("<tr bgcolor='#f2f2f2'><b><td align='left'>Artículo</td><td align='center'>Cant.</td><td align='right'>Precio</td><td align='center'>Stock Fis.</td></b></tr>");
+        html.append("<tr bgcolor='#f2f2f2'>");
+        html.append("<td width='50%' align='left'><b>Artículo</b></td>");
+        html.append("<td width='15%' align='center'><b>Cant.</b></td>");
+        html.append("<td width='18%' align='right'><b>Precio</b></td>");
+        html.append("<td width='17%' align='center'><b>Stock Fis.</b></td>");
+        html.append("</tr>");
 
         boolean stockSuficiente = true;
 
@@ -235,10 +240,10 @@ public class PedidosWebView extends JFrame {
             }
 
             html.append("<tr>");
-            html.append("<td align='left'>").append(item.name).append(" (SKU: ").append(item.sku != null ? item.sku : "S/S").append(")</td>");
-            html.append("<td align='center'>").append(item.quantity).append("</td>");
-            html.append("<td align='right'>$ ").append(item.price).append("</td>");
-            html.append("<td align='center' style='color:").append(colorStock).append("; font-weight:bold;'>").append(stockLocalStr).append("</td>");
+            html.append("<td width='50%' align='left'>").append(item.name).append(" (SKU: ").append(item.sku != null ? item.sku : "S/S").append(")</td>");
+            html.append("<td width='15%' align='center'>").append(item.quantity).append("</td>");
+            html.append("<td width='18%' align='right'>$ ").append(item.price).append("</td>");
+            html.append("<td width='17%' align='center' style='color:").append(colorStock).append("; font-weight:bold;'>").append(stockLocalStr).append("</td>");
             html.append("</tr>");
         }
         html.append("</table>");
